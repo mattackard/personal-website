@@ -56,7 +56,7 @@ footer p {
 
 /*nav media queries*/
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
     header {
         flex-direction: column;
         text-align: center;
@@ -99,7 +99,7 @@ button:hover {
 
 /*home page media queries*/
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
     #bigNav {
         flex-direction: column;
     }
