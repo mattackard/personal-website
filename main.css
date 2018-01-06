@@ -1,5 +1,5 @@
 body {
-    background-image: url(temp-bg-large.jpg);
+    background-image: url(img/temp-bg-large.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Amatic SC', cursive;
@@ -30,6 +30,10 @@ h1 {
     margin: 0;
 }
 
+h1:hover {
+    color: #555;
+}
+
 #mainPage {
     text-decoration: none;
 }
@@ -47,13 +51,10 @@ nav ul {
 nav ul li { 
     font-size: 1.5em;
     margin: 0 1em;
+    text-decoration: underline;
 }
 
-a {
-    color: black;
-}
-
-a:hover {
+nav li:hover {
     color: #555;
 }
 
@@ -113,7 +114,7 @@ footer p {
 
 /*home page*/
 
-#bigNav {
+#bigNav, #contactPage, #musicPage, #climbPage, #webPage {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -132,6 +133,10 @@ footer p {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+}
+
+#contactPage, #musicPage, #climbPage, #webPage {
+    display: none;
 }
 
 button {
@@ -172,4 +177,16 @@ button:hover {
     button {
         width: 60%;
     }
+}
+
+
+/*contact page*/
+
+#profilePic {
+    border-radius: 50%;
+}
+
+#contactIcons img {
+    width: 40px;
+    height: 40px;
 }
