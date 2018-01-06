@@ -79,11 +79,12 @@ footer p {
         flex-direction: column;
         text-align: center;
         padding-left: 1em;
-        font-size: 1.3em;
+        font-size: 1.2em;
+        line-height: 0.7;
     }
     
     nav ul {
-        font-size: 1.2em;
+        font-size: 1em;
         padding: 0;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -104,34 +105,9 @@ footer p {
 }
 
 @media only screen and (max-width: 1000px) {
+    
     header {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        text-align: center;
-        padding-left: 1em;
-        font-size: 2em;
-    }
-    
-    nav ul {
         font-size: 1.4em;
-        padding: 0;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-    }
-    
-    nav ul li {
-        margin: 0 .5em;
-    }
-    
-    nav ul li:first-child {
-        list-style: none;
-    }
-    
-    footer p {
-        font-size: 2em;
     }
 }
 
@@ -185,23 +161,15 @@ button:hover {
     }
 
     button {
-        width: 70%;
-        font-size: 3em;
+        width: 50%;
+        font-size: 2em;
         margin: 1em auto;
     }
 }
 
 @media all and (max-width: 1000px) {
-    #bigNav {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
 
     button {
-        width: 80%;
-        font-size: 4em;
-        margin: 1em auto;
+        width: 60%;
     }
 }
