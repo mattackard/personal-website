@@ -46,7 +46,7 @@ nav ul {
 
 nav ul li { 
     font-size: 1.5em;
-    margin: 0 1em 0 1em;
+    margin: 0 1em;
 }
 
 a {
@@ -79,6 +79,39 @@ footer p {
         flex-direction: column;
         text-align: center;
         padding-left: 1em;
+        font-size: 1.3em;
+    }
+    
+    nav ul {
+        font-size: 1.2em;
+        padding: 0;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0 1em;
+    }
+    
+    nav ul li:first-child {
+        list-style: none;
+    }
+    
+    footer p {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    header {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 1em;
+        font-size: 2em;
     }
     
     nav ul {
@@ -89,8 +122,16 @@ footer p {
         justify-content: center;
     }
     
+    nav ul li {
+        margin: 0 .5em;
+    }
+    
     nav ul li:first-child {
         list-style: none;
+    }
+    
+    footer p {
+        font-size: 2em;
     }
 }
 
@@ -120,7 +161,7 @@ footer p {
 button {
     width: 20%;
     height: 3em;
-    margin: 0 3% 0 3%;
+    margin: 0 3%;
     background-color: #ddd;
     opacity: 0.6;
     border: solid black 4px;
@@ -144,7 +185,23 @@ button:hover {
     }
 
     button {
+        width: 70%;
+        font-size: 3em;
+        margin: 1em auto;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    #bigNav {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    button {
         width: 80%;
+        font-size: 4em;
         margin: 1em auto;
     }
 }
