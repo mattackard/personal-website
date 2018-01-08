@@ -1,9 +1,5 @@
 /*globals $:false */
 
-//const updateFooter = function(div) {
-//    $("footer").css("background-image") = $(div).css("background-image");
-//}
-
 $(".pageLink").click(function () {
     "use strict";
     

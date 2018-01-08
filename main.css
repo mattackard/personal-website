@@ -1,7 +1,10 @@
 body {
+/*
     background-image: url(img/temp-bg-large.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+*/
+    background-color: darkgray;
     font-family: 'Amatic SC', cursive;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -24,6 +27,7 @@ header {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
+    z-index: 2;
 }
 
 h1 {
@@ -72,6 +76,25 @@ footer p {
     margin: 0;
     font-size: 1.5em;
     color: white;
+}
+
+.hiddenBG {
+    opacity: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    position: fixed;
+    z-index: -2;
+}
+
+.currentBG {
+    display: block;
+    position: fixed;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    opacity: 1;
+    z-index: -1;
 }
 
 /*nav media queries*/
@@ -186,11 +209,24 @@ button:hover {
 
 /*contact page*/
 
+#contactPage {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
 #profilePic {
     border-radius: 50%;
+    margin-bottom: 5em;
 }
 
 #contactIcons img {
     width: 40px;
     height: 40px;
+    margin: 0 0.5em;
+}
+
+#contactPage p {
+    font-size: 2em;
 }
