@@ -1,51 +1,44 @@
-/*globals $:false */
+
+
+const changePage = function (pageID, pageSRC, displayValue) {
+    $(".subPage").fadeOut(function () {
+        $(pageID).load(pageSRC, function () {
+            $(pageID).css("display", displayValue).hide().fadeIn();
+        });
+    });
+}
+
+const fadeBG = function (imageID) {
+    $(".currentBG").fadeOut().addClass("hiddenBG");
+    $(imageID).removeClass("hiddenBG").addClass("currentBG").fadeIn();
+}
 
 $(".pageLink").click(function () {
     "use strict";
     
     if ($(this).hasClass("webLink")) {
-        $("#bigNav").fadeOut(function () {
-            $(".subPage").fadeOut(function() {
-                $("#webPage").load("webdev.html", function () {
-                    $("#webPage").css("display", "flex").hide().fadeIn();
-                });
-            });
-        });
+        changePage("#webPage","webdev.html","flex");
+        fadeBG("#webPageBG");
     }
-    
     else if ($(this).hasClass("climbLink")) {
-        $("#bigNav").fadeOut(function () {
-            $(".subPage").fadeOut(function() {
-                $("#climbPage").load("climb.html", function () {
-                    $("#climbPage").css("display", "flex").hide().fadeIn();
-                });
-            });
-        });
+        changePage("#climbPage","climb.html","flex");
+        fadeBG("#climbPageBG");
     }
     
     else if ($(this).hasClass("musicLink")) {
-        $("#bigNav").fadeOut(function () {
-            $(".subPage").fadeOut(function() {
-                $("#musicPage").load("music.html", function () {
-                    $("#musicPage").css("display", "flex").hide().fadeIn();
-                });
-            });
-        });
+        changePage("#musicPage","music.html","flex");
+        fadeBG("#musicPageBG");
     }
     
     else if ($(this).hasClass("contactLink")) {
-        $("#bigNav").fadeOut(function () {
-            $(".subPage").fadeOut(function() {
-                $("#contactPage").load("contact.html", function () {
-                    $("#contactPage").css("display", "flex").hide().fadeIn();
-                });
-            });
-        });
+        changePage("#contactPage","contact.html","flex");
+        fadeBG("#contactPageBG");
     }
     
-    else {
-        $(".subPage").fadeOut(function() {  
+    else if ($(this).hasClass("homeLink")) {
+        $(".subPage").fadeOut(function () {  
             $("#bigNav").css("display", "flex").hide().fadeIn();   
-        });       
+        });    
+        fadeBG("#mainPageBG");
     }
 });

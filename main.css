@@ -4,7 +4,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 */
-    background-color: darkgray;
+    background-color: #222;
     font-family: 'Amatic SC', cursive;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -78,22 +78,19 @@ footer p {
     color: white;
 }
 
-.hiddenBG {
-    opacity: 0;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+#background img {
     position: fixed;
+    width: 100%;
+}
+
+.hiddenBG { 
+    opacity: 0;
     z-index: -2;
 }
 
 .currentBG {
     display: block;
-    position: fixed;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    opacity: 1;
+    opacity: 0.8;
     z-index: -1;
 }
 
