@@ -17,28 +17,38 @@ $(".pageLink").click(function () {
     "use strict";
     
     if ($(this).hasClass("webLink")) {
-        changePage("#webPage","webdev.html","flex");
-        fadeBG("#webPageBG");
+        if ($("#webPage").css("display") === "none") {
+            changePage("#webPage","webdev.html","flex");
+            fadeBG("#webPageBG");    
+        }    
     }
     else if ($(this).hasClass("climbLink")) {
-        changePage("#climbPage","climb.html","flex");
-        fadeBG("#climbPageBG");
+        if ($("#climbPage").css("display") === "none") {
+            changePage("#climbPage","climb.html","flex");
+            fadeBG("#climbPageBG");
+        }
     }
     
     else if ($(this).hasClass("musicLink")) {
-        changePage("#musicPage","music.html","flex");
-        fadeBG("#musicPageBG");
+        if ($("#musicPage").css("display") === "none") {
+            changePage("#musicPage","music.html","flex");
+            fadeBG("#musicPageBG");
+        }
     }
     
     else if ($(this).hasClass("contactLink")) {
-        changePage("#contactPage","contact.html","flex");
-        fadeBG("#contactPageBG");
+        if ($("#contactPage").css("display") === "none") {
+            changePage("#contactPage","contact.html","flex");
+            fadeBG("#contactPageBG");
+        }
     }
     
     else if ($(this).hasClass("homeLink")) {
-        $(".subPage").fadeOut(function () {  
-            $("#bigNav").css("display", "flex").hide().fadeIn();   
-        });    
-        fadeBG("#mainPageBG");
+        if ($("#bigNav").css("display") === "none") {
+            $(".subPage").fadeOut(function () {  
+                $("#bigNav").css("display", "flex").hide().fadeIn();   
+            });    
+            fadeBG("#mainPageBG");
+        }
     }
 });

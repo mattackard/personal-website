@@ -8,5 +8,6 @@
     "brackets-minifier.concat-js-filename": "",
     "brackets-minifier.concat-css-filename": "",
     "brackets-minifier.uglifyjs-options": "{}",
-    "brackets-minifier.cleancss-options": "{}"
+    "brackets-minifier.cleancss-options": "{}",
+    "jslint.options": {"es6": true}
 }
