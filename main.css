@@ -1,9 +1,4 @@
 body {
-/*
-    background-image: url(img/temp-bg-large.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-*/
     background-color: #222;
     font-family: 'Amatic SC', cursive;
     display: -webkit-box;
@@ -80,7 +75,8 @@ footer p {
 
 #background img {
     position: fixed;
-    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .hiddenBG { 
