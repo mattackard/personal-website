@@ -223,3 +223,56 @@ button:hover {
 #contactPage p {
     font-size: 2em;
 }
+
+/*web dev page*/
+
+#webPage {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    background: rgba(100,100,100,.5);
+    border-radius: 4em;
+    margin: 1% 22% 2%;
+    padding: 4em 8em;
+}
+
+#webPage p {
+    font-size: 1.4em;
+    font-family: monospace;
+}
+
+#webPage h1:hover {
+    color: #000;
+}
+
+#webProjects h1 {
+    margin: 1em 0;
+    text-align: center;
+}
+
+#webProjects ul {
+    text-align: center;
+    list-style: none;
+    font-size: 1.6em
+}
+
+#webProjects p {
+    font-family: monospace;
+    font-size: .8em;
+}
+
+@media only screen and (max-width: 1400px) {
+    #webPage {
+        margin: 1% 10% 5%;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    #webPage {
+        padding: 4em 4em;
+    }
+}
