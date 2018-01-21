@@ -30,7 +30,7 @@ h1 {
     margin: 0;
 }
 
-h1:hover {
+#mainPage:hover {
     color: #555;
 }
 
@@ -245,10 +245,6 @@ button:hover {
     font-family: monospace;
 }
 
-#webPage h1:hover {
-    color: #000;
-}
-
 #webProjects h1 {
     margin: 1em 0;
     text-align: center;
@@ -273,6 +269,38 @@ button:hover {
 
 @media all and (max-width: 1000px) {
     #webPage {
+        padding: 4em 4em;
+    }
+}
+
+/*climb page*/
+
+#climbPage {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    background: rgba(100,100,100,.5);
+    margin: 0 12%;
+    padding: 4em 8em;
+}
+
+#climbPage p {
+    font-family: monospace;
+    font-size: 1.4em;
+}
+
+@media only screen and (max-width: 1400px) {
+    #climbPage {
+        margin: 0 10% 5%;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    #climbPage {
         padding: 4em 4em;
     }
 }
