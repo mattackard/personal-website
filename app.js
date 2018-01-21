@@ -16,8 +16,6 @@ const changePage = function (pageID, pageSRC, displayValue, imageID) {
 }
 
 $(".pageLink").click(function () {
-    "use strict";
-    
     if ($(this).hasClass("webLink")) {
             changePage("#webPage","webdev.html","flex","#webPageBG");    
     }

@@ -221,6 +221,10 @@ button:hover {
     margin: 0 0.5em;
 }
 
+#contactIcons img:hover {
+    opacity: 0.7;
+}
+
 #contactPage p {
     font-size: 2em;
 }
@@ -301,6 +305,88 @@ button:hover {
 
 @media all and (max-width: 1000px) {
     #climbPage {
+        padding: 4em 4em;
+    }
+}
+
+/*music page*/
+
+#musicPage {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    background: rgba(100,100,100,.8);
+    margin: 0 12%;
+    padding: 4em 8em;
+}
+
+#musicPage p {
+    font-size: 1.4em;
+    font-family: monospace;
+}
+
+audio {
+    width: 80%;
+    margin-top: 2em;
+    padding: 0 0 1em;
+    background-color: white;
+}
+
+.songSelect {
+    width: 80%;
+    margin: 0;
+    font-size: 2em;
+}
+
+.songSelect ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    list-style: none;
+    padding: .3em 0;
+    font-size: .6em;
+    background-color: white;
+    opacity: 0.5;
+    margin: 0;
+    border: 1px solid gray;
+    border-left: none;
+    border-right: none;
+}
+
+.songSelect ul:hover {
+    opacity: 1;
+}
+
+.songSelect ul li {
+    margin: 0 .5em;
+}
+
+.songSelect ul li:first-child {
+    font-size: 1.6em;
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+}
+
+@media only screen and (max-width: 1400px) {
+    #musicPage {
+        margin: 0 10% 5%;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    #musicPage {
         padding: 4em 4em;
     }
 }
