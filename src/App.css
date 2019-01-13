@@ -1,0 +1,334 @@
+body {
+  background-color: #222;
+  font-family: 'Amatic SC', cursive;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+header {
+  background-color: white;
+  opacity: 1;
+  padding: 1em 1em 0 10%;
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+#mainPage:hover {
+  color: #555;
+}
+
+#mainPage {
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  flex: 1 1 auto;
+  white-space: nowrap;
+}
+
+nav ul li { 
+  font-size: 1.5em;
+  margin: 0 1em;
+  text-decoration: underline;
+}
+
+nav li:hover {
+  color: #555;
+}
+
+footer {
+  text-align: center;
+  opacity: 0.3;
+  margin-bottom: 2px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1.5em;
+  color: white;
+}
+
+#background img {
+  position: fixed;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.hiddenBG { 
+  opacity: 0;
+  z-index: -2;
+}
+
+.currentBG {
+  display: block;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+/*nav media queries*/
+
+@media only screen and (max-width: 1200px) {
+  header {
+      flex-direction: column;
+      text-align: center;
+      padding-left: 1em;
+      font-size: 1.2em;
+      line-height: 0.7;
+  }
+  
+  nav ul {
+      font-size: 1em;
+      padding: 0;
+      justify-content: center;
+  }
+  
+  nav ul li {
+      margin: 0 1em;
+  }
+  
+  nav ul li:first-child {
+      list-style: none;
+  }
+  
+  footer p {
+      font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  
+  header {
+      font-size: 1.4em;
+  }
+}
+
+/*home page*/
+
+#bigNav, #contactPage, #musicPage, #climbPage, #webPage {
+  display: flex;
+  flex: 1 auto auto;
+  flex-direction: row;
+  justify-content: center;
+  flex-grow: 1;
+  align-items: center;
+}
+
+#contactPage, #musicPage, #climbPage, #webPage {
+  display: none;
+}
+
+button {
+  width: 20%;
+  height: 3em;
+  margin: 0 3%;
+  background-color: #ddd;
+  opacity: 0.6;
+  border: solid black 4px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2em;
+}
+
+button:hover {
+  opacity: 0.85;
+  
+}
+
+/*home page media queries*/
+
+@media only screen and (max-width: 1200px) {
+  #bigNav {
+      flex-direction: column;
+  }
+
+  button {
+      width: 50%;
+      font-size: 2em;
+      margin: 1em auto;
+  }
+}
+
+@media all and (max-width: 1000px) {
+
+  button {
+      width: 60%;
+  }
+}
+
+
+/*contact page*/
+
+#contactPage {
+  flex-direction: column;
+}
+
+#profilePic {
+  border-radius: 50%;
+  margin-bottom: 5em;
+}
+
+#contactIcons img {
+  width: 40px;
+  height: 40px;
+  margin: 0 0.5em;
+}
+
+#contactIcons img:hover {
+  opacity: 0.7;
+}
+
+#contactPage p {
+  font-size: 2em;
+}
+
+/*web dev page*/
+
+#webPage {
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #ddd;
+  border-radius: .5em;
+  margin: 1em 20% 0;
+  padding: 4em 4em;
+}
+
+#webPage p {
+  font-size: 1.4em;
+  font-family: monospace;
+}
+
+#webProjects h1 {
+  margin: 1em 0;
+  text-align: center;
+}
+
+#webProjects ul {
+  text-align: center;
+  list-style: none;
+  font-size: 1.6em
+}
+
+#webProjects p {
+  font-family: monospace;
+  font-size: .8em;
+}
+
+@media only screen and (max-width: 1400px) {
+  #webPage {
+      margin: 0 10% 5%;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  #webPage {
+      padding: 4em 4em;
+  }
+}
+
+/*climb page*/
+
+#climbPage {
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #ddd;
+  border-radius: .5em;
+  margin: 1em 20% 0;
+  padding: 4em 4em;
+}
+
+#climbPage p {
+  font-family: monospace;
+  font-size: 1.4em;
+}
+
+@media only screen and (max-width: 1400px) {
+  #climbPage {
+      margin: 0 10% 5%;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  #climbPage {
+      padding: 4em 4em;
+  }
+}
+
+/*music page*/
+
+#musicPage {
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #ddd;
+  border-radius: .5em;
+  margin: 1em 20% 0;
+  padding: 4em 4em;
+}
+
+#musicPage p {
+  font-size: 1.4em;
+  font-family: monospace;
+}
+
+audio {
+  width: 80%;
+  margin-top: 2em;
+  padding: 0 0 1em;
+  background-color: white;
+}
+
+.songSelect {
+  width: 80%;
+  margin: 0;
+  font-size: 2em;
+}
+
+.songSelect ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  padding: .3em 0;
+  font-size: .6em;
+  background-color: white;
+  opacity: 0.5;
+  margin: 0;
+  border: 1px solid gray;
+  border-left: none;
+  border-right: none;
+}
+
+.songSelect ul:hover {
+  opacity: 1;
+}
+
+.songSelect ul li {
+  margin: 0 .5em;
+}
+
+.songSelect ul li:first-child {
+  font-size: 1.6em;
+  flex-grow: 2;
+}
+
+@media only screen and (max-width: 1400px) {
+  #musicPage {
+      margin: 0 10% 5%;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  #musicPage {
+      padding: 4em 4em;
+  }
+}
