@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Webdev from "./components/Webdev";
-import Music from "./components/Music";
+import Photography from "./components/Photography";
 import Climb from "./components/Climb";
 import NotFound from "./components/NotFound";
 
@@ -68,7 +68,7 @@ class App extends Component {
                             <Route exact path="/" component={Home} />
                             <Route path="/web" component={Webdev} />
                             <Route path="/climb" component={Climb} />
-                            <Route path="/music" component={Music} />
+                            <Route path="/photo" component={Photography} />
                             <Route path="/contact" component={Contact} />
                             <Route component={NotFound} />
                         </Switch>

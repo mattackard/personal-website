@@ -184,27 +184,29 @@ button:hover {
   border-radius: .5em;
   margin: 0 10% 5%;
   padding: 4em 4em;
+
+  p {
+    font-size: 1.4em;
+    font-family: monospace;
+  }
 }
 
-#webPage p {
-  font-size: 1.4em;
-  font-family: monospace;
-}
+#webProjects {
+  h1 {
+    margin: 1em 0;
+    text-align: center;
+  }
 
-#webProjects h1 {
-  margin: 1em 0;
-  text-align: center;
-}
+  ul {
+    text-align: center;
+    list-style: none;
+    font-size: 1.6em
+  }
 
-#webProjects ul {
-  text-align: center;
-  list-style: none;
-  font-size: 1.6em
-}
-
-#webProjects p {
-  font-family: monospace;
-  font-size: .8em;
+  p {
+    font-family: monospace;
+    font-size: .8em;
+  }
 }
 
 /*climb page*/
@@ -216,66 +218,26 @@ button:hover {
   border-radius: .5em;
   margin: 0 10% 5%;
   padding: 4em 4em;
+
+  p {
+    font-family: monospace;
+    font-size: 1.4em;
+  }
 }
 
-#climbPage p {
-  font-family: monospace;
-  font-size: 1.4em;
+/*photography page*/
+
+#photoPage {
+  h1 {
+    font-size: 4em;
+    color: blue;
+  }
 }
 
-/*music page*/
+/*error page*/
 
-#musicPage {
-  flex-direction: column;
-  justify-content: flex-start;
-  background: #ddd;
-  border-radius: .5em;
-  margin: 0 10% 5%;
-  padding: 4em 4em;
-}
-
-#musicPage p {
-  font-size: 1.4em;
-  font-family: monospace;
-}
-
-audio {
-  width: 80%;
-  margin-top: 2em;
-  padding: 0 0 1em;
-  background-color: white;
-}
-
-.songSelect {
-  width: 80%;
-  margin: 0;
-  font-size: 2em;
-}
-
-.songSelect ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  list-style: none;
-  padding: .3em 0;
-  font-size: .6em;
-  background-color: white;
-  opacity: 0.5;
-  margin: 0;
-  border: 1px solid gray;
-  border-left: none;
-  border-right: none;
-}
-
-.songSelect ul:hover {
-  opacity: 1;
-}
-
-.songSelect ul li {
-  margin: 0 .5em;
-}
-
-.songSelect ul li:first-child {
-  font-size: 1.6em;
-  flex-grow: 2;
+#errorPage {
+  text-align: center;
+  padding-top: 4em;
+  font-size: 4em;
 }
