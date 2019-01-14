@@ -1,5 +1,4 @@
 body {
-  background-color: #222;
   font-family: 'Amatic SC', cursive;
   display: flex;
   flex-direction: column;
@@ -40,8 +39,16 @@ nav ul li {
   text-decoration: underline;
 }
 
+header a {
+  color: black;
+}
+
 nav li:hover {
   color: #555;
+}
+
+.active {
+  color: lightblue;
 }
 
 footer {
@@ -127,6 +134,11 @@ footer p {
 
 #contactPage, #musicPage, #climbPage, #webPage {
   display: none;
+}
+
+#bigNav a {
+  text-decoration: none;
+  color: black;
 }
 
 button {

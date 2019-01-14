@@ -3,7 +3,7 @@ import React from 'react';
 const Contact = () => {
     return (
         <div>
-            <img id="profilePic" src="img/profile.jpg" />
+            <img id="profilePic" src="img/profile.jpg" alt="Matt Ackard" />
             <p>mattackard@gmail.com</p>
             <div id="contactIcons">
                 <a href="https://github.com/mattackard"><img src="img/git.svg" alt="Github" /></a>
