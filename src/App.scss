@@ -3,15 +3,24 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+  min-height: 100vh;
+  margin: 0;
+}
+
+#root, #content {
+  min-height: 100vh;
 }
 
 header {
-  background-color: white;
-  opacity: 1;
+  background-color: rgba(221, 221, 221, 0.712);
   padding: 1em 1em 0 10%;
   display: flex;
   flex-direction: row;
   z-index: 2;
+
+  a {
+    color: black;
+  }
 }
 
 h1 {
@@ -19,36 +28,32 @@ h1 {
   margin: 0;
 }
 
-#mainPage:hover {
-  color: #555;
-}
-
 #mainPage {
   text-decoration: none;
+
+  &:hover {
+    color: #555;
+  }
 }
 
 nav ul {
   display: flex;
   flex: 1 1 auto;
   white-space: nowrap;
-}
 
-nav ul li { 
-  font-size: 1.5em;
-  margin: 0 1em;
-  text-decoration: underline;
-}
+  li { 
+    font-size: 1.5em;
+    margin: 0 1em;
+    text-decoration: underline;
+  }
 
-header a {
-  color: black;
-}
-
-nav li:hover {
-  color: #555;
+  &:hover {
+    color: #555;
+  }
 }
 
 .active {
-  color: lightblue;
+  color: red;
 }
 
 footer {
@@ -58,12 +63,12 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-}
 
-footer p {
-  margin: 0;
-  font-size: 1.5em;
-  color: white;
+  p {
+    margin: 0;
+    font-size: 1.5em;
+    color: white;
+  }
 }
 
 #background img {
@@ -99,14 +104,14 @@ footer p {
       font-size: 1em;
       padding: 0;
       justify-content: center;
-  }
-  
-  nav ul li {
-      margin: 0 1em;
-  }
-  
-  nav ul li:first-child {
-      list-style: none;
+
+      li {
+        margin: 0 1em;
+      }
+
+      li:first-child {
+        list-style: none;
+      }
   }
   
   footer p {
@@ -130,10 +135,6 @@ footer p {
   justify-content: center;
   flex-grow: 1;
   align-items: center;
-}
-
-#contactPage, #musicPage, #climbPage, #webPage {
-  display: none;
 }
 
 #bigNav a {
@@ -183,6 +184,10 @@ button:hover {
 
 #contactPage {
   flex-direction: column;
+
+  p {
+    font-size: 2em;
+  }
 }
 
 #profilePic {
@@ -190,18 +195,21 @@ button:hover {
   margin-bottom: 5em;
 }
 
-#contactIcons img {
-  width: 40px;
-  height: 40px;
-  margin: 0 0.5em;
-}
+#contactIcons {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
 
-#contactIcons img:hover {
-  opacity: 0.7;
-}
+  img {
+    width: 40px;
+    height: 40px;
+    margin: 0 0.5em;
+  }
 
-#contactPage p {
-  font-size: 2em;
+  img:hover {
+    opacity: 0.7;
+  }
 }
 
 /*web dev page*/

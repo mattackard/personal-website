@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
-import './App.css';
+import './App.scss';
 
 //component imports
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Webdev from "./components/Webdev";
@@ -61,17 +62,18 @@ class App extends Component {
     render() {
         return (
             <BrowserRouter>
-                <div>
+                <div id="content">
                     <Header />
-                    <Switch>
-                        <Route exact path="/" component={Home} />
-                        <Route path="/web" component={Webdev} />
-                        <Route path="/climb" component={Climb} />
-                        <Route path="/music" component={Music} />
-                        <Route path="/contact" component={Contact} />
-                        <Route component={NotFound} />
-                    </Switch>
-                </div>
+                        <Switch>
+                            <Route exact path="/" component={Home} />
+                            <Route path="/web" component={Webdev} />
+                            <Route path="/climb" component={Climb} />
+                            <Route path="/music" component={Music} />
+                            <Route path="/contact" component={Contact} />
+                            <Route component={NotFound} />
+                        </Switch>
+                    <Footer />
+                </div>    
             </BrowserRouter>
         );
     }
