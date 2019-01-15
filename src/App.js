@@ -1,7 +1,6 @@
 //module import
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
-import { Transition } from 'react-transition-group';
 
 //style import
 import './App.scss';
@@ -19,7 +18,7 @@ import NotFound from "./components/NotFound";
 class App extends Component {
 
     state = {
-        currentBG: "img/temp-bg-large.jpg"
+        currentBG: "img/temp-bg-large.jpg",
     }
 
     setBG = (file) => {
@@ -69,19 +68,6 @@ class App extends Component {
     //     });
     // }
 
-    //react-transition config
-    duration = 900;
-
-    defaultStyle = {
-        transition: `opacity ${this.duration}ms ease-in-out`,
-        opacity: 0,
-    }
-
-    transitionStyles = {
-        entering: { opacity: 0 },
-        entered:  { opacity: 1 },
-    };
-
     render() {
         return (
             <BrowserRouter>
@@ -97,16 +83,11 @@ class App extends Component {
                              />
                             <Route 
                                 path="/web" 
-                                render={(props) => <Transition 
-                                                        mountOnEnter 
-                                                        timeout={300} 
-                                                        unmountOnExit>
-
-                                                        <Webdev 
+                                render={(props) => 
+                                                    <Webdev 
                                                         {...props} 
-                                                        setBG={this.setBG} />
-
-                                                    </Transition>} />
+                                                        setBG={this.setBG} />} 
+                            />
                             <Route 
                                 path="/climb" 
                                 render={(props) => <Climb 
