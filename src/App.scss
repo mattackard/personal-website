@@ -1,3 +1,20 @@
+
+
+//variables
+$accent-color: rgb(9, 44, 110);
+
+//mixins
+@mixin content-background {
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #ddd;
+  border-radius: .5em;
+  margin: 0 10% 5%;
+  padding: 4em;
+}
+
+
+//styling
 body {
   font-family: 'Amatic SC', cursive;
   display: flex;
@@ -17,7 +34,7 @@ header {
   display: flex;
   flex-direction: column;
   z-index: 2;
-  font-size: 1.4em;
+  font-size: 1em;
   text-align: center;
   line-height: 0.7;
 
@@ -53,7 +70,7 @@ nav ul {
 
   li { 
     font-size: 1.5em;
-    margin: 0 1em;
+    margin: 0 1em 0 .5em;
     text-decoration: underline;
   }
 
@@ -63,7 +80,7 @@ nav ul {
 }
 
 .active {
-  color: red;
+  color: $accent-color;
 }
 
 footer {
@@ -81,22 +98,14 @@ footer {
   }
 }
 
-#background img {
-  position: fixed;
-  top: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-
-.hiddenBG { 
-  opacity: 0;
-  z-index: -2;
-}
-
 .currentBG {
   display: block;
   opacity: 0.8;
   z-index: -1;
+  position: fixed;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 /*nav media queries*/
@@ -105,7 +114,7 @@ footer {
 
 /*home page*/
 
-#bigNav, #contactPage, #musicPage, #climbPage, #webPage {
+#bigNav, #contactPage, #photoPage, #climbPage, #webPage, #errorPage {
   display: flex;
   flex: 1 auto auto;
   flex-direction: row;
@@ -178,12 +187,7 @@ button:hover {
 /*web dev page*/
 
 #webPage {
-  flex-direction: column;
-  justify-content: flex-start;
-  background: #ddd;
-  border-radius: .5em;
-  margin: 0 10% 5%;
-  padding: 4em 4em;
+  @include content-background;
 
   p {
     font-size: 1.4em;
@@ -212,12 +216,7 @@ button:hover {
 /*climb page*/
 
 #climbPage {
-  flex-direction: column;
-  justify-content: flex-start;
-  background: #ddd;
-  border-radius: .5em;
-  margin: 0 10% 5%;
-  padding: 4em 4em;
+  @include content-background;
 
   p {
     font-family: monospace;
@@ -228,6 +227,8 @@ button:hover {
 /*photography page*/
 
 #photoPage {
+  @include content-background;
+
   h1 {
     font-size: 4em;
     color: blue;
@@ -237,7 +238,5 @@ button:hover {
 /*error page*/
 
 #errorPage {
-  text-align: center;
-  padding-top: 4em;
-  font-size: 4em;
+  @include content-background;
 }

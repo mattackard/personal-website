@@ -1,5 +1,9 @@
+//module import
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
+import { Transition } from 'react-transition-group';
+
+//style import
 import './App.scss';
 
 //component imports
@@ -15,7 +19,13 @@ import NotFound from "./components/NotFound";
 class App extends Component {
 
     state = {
+        currentBG: "img/temp-bg-large.jpg"
+    }
 
+    setBG = (file) => {
+        this.setState({
+            currentBG: `img/${file}.jpg`
+        });
     }
 
     fadeBG = (imageID) => {
@@ -34,30 +44,43 @@ class App extends Component {
         }
     }
 
-    componentDidMount() {
-        document.querySelector(".pageLink").click(() => {
-        if (document.querySelector(this).hasClass("webLink")) {
-                this.changePage("#webPage","webdev.html","flex","#webPageBG");    
-        }
-        else if (document.querySelector(this).hasClass("climbLink")) {
-                this.changePage("#climbPage","climb.html","flex","#climbPageBG");
-        }
-        else if (document.querySelector(this).hasClass("musicLink")) {
-                this.changePage("#musicPage","music.html","flex","#musicPageBG");
-        }
-        else if (document.querySelector(this).hasClass("contactLink")) {
-                this.changePage("#contactPage","contact.html","flex","#contactPageBG");
-        }
-        else if (document.querySelector(this).hasClass("homeLink")) {
-            if (document.querySelector("#bigNav").css("display") === "none") {
-                document.querySelector(".subPage").fadeOut(() => {  
-                    document.querySelector("#bigNav").css("display", "flex").hide().fadeIn();   
-                });    
-                this.fadeBG("#mainPageBG");
-            }
-            }
-        });
+    // componentDidMount() {
+    //     document.querySelector(".pageLink").click(() => {
+    //     if (document.querySelector(this).hasClass("webLink")) {
+    //             this.changePage("#webPage","webdev.html","flex","#webPageBG");    
+    //     }
+    //     else if (document.querySelector(this).hasClass("climbLink")) {
+    //             this.changePage("#climbPage","climb.html","flex","#climbPageBG");
+    //     }
+    //     else if (document.querySelector(this).hasClass("musicLink")) {
+    //             this.changePage("#musicPage","music.html","flex","#musicPageBG");
+    //     }
+    //     else if (document.querySelector(this).hasClass("contactLink")) {
+    //             this.changePage("#contactPage","contact.html","flex","#contactPageBG");
+    //     }
+    //     else if (document.querySelector(this).hasClass("homeLink")) {
+    //         if (document.querySelector("#bigNav").css("display") === "none") {
+    //             document.querySelector(".subPage").fadeOut(() => {  
+    //                 document.querySelector("#bigNav").css("display", "flex").hide().fadeIn();   
+    //             });    
+    //             this.fadeBG("#mainPageBG");
+    //         }
+    //         }
+    //     });
+    // }
+
+    //react-transition config
+    duration = 900;
+
+    defaultStyle = {
+        transition: `opacity ${this.duration}ms ease-in-out`,
+        opacity: 0,
     }
+
+    transitionStyles = {
+        entering: { opacity: 0 },
+        entered:  { opacity: 1 },
+    };
 
     render() {
         return (
@@ -65,14 +88,51 @@ class App extends Component {
                 <div id="content">
                     <Header />
                         <Switch>
-                            <Route exact path="/" component={Home} />
-                            <Route path="/web" component={Webdev} />
-                            <Route path="/climb" component={Climb} />
-                            <Route path="/photo" component={Photography} />
-                            <Route path="/contact" component={Contact} />
-                            <Route component={NotFound} />
+                            <Route 
+                                exact 
+                                path="/" 
+                                render={(props) => <Home 
+                                                        {...props} 
+                                                        setBG={this.setBG} />}
+                             />
+                            <Route 
+                                path="/web" 
+                                render={(props) => <Transition 
+                                                        mountOnEnter 
+                                                        timeout={300} 
+                                                        unmountOnExit>
+
+                                                        <Webdev 
+                                                        {...props} 
+                                                        setBG={this.setBG} />
+
+                                                    </Transition>} />
+                            <Route 
+                                path="/climb" 
+                                render={(props) => <Climb 
+                                                        {...props} 
+                                                        setBG={this.setBG} />} 
+                            />
+                            <Route 
+                                path="/photo" 
+                                render={(props) => <Photography 
+                                                        {...props} 
+                                                        setBG={this.setBG} />} 
+                            />
+                            <Route 
+                                path="/contact" 
+                                render={(props) => <Contact 
+                                                        {...props} 
+                                                        setBG={this.setBG} />} 
+                            />
+                            <Route 
+                                render={(props) => <NotFound 
+                                                        {...props} 
+                                                        setBG={this.setBG} />} 
+                            />
                         </Switch>
                     <Footer />
+                    <img className="currentBG" src={this.state.currentBG} alt="page background" />
                 </div>    
             </BrowserRouter>
         );
