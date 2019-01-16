@@ -7,7 +7,7 @@ class Contact extends Component {
         setBG: Proptypes.func.isRequired,
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.props.setBG('contactBG');
     }
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Proptypes from 'prop-types';
-import { CSSTransition } from 'react-transition-group';
 
 class Webdev extends Component {
 
@@ -8,17 +7,12 @@ class Webdev extends Component {
         setBG: Proptypes.func.isRequired,
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.props.setBG('webBG');
     }
 
     render() {
         return (
-            <CSSTransition 
-                in={true}
-                timeout={10}
-                classNames="fade"
-                unmountOnExit>
                 <section id="webPage">
                     <h1>Web Development</h1>
                     <p>I am a self taught front-end web developer and am looking to start my career off as a junior developer. I have been using the coursework on TeamTreehouse alongside working on projects to learn web development. I plan to continue using these resources and move toward learning the MERN stack to have a more well rounded knowlendge of web development.</p>
@@ -34,7 +28,6 @@ class Webdev extends Component {
                         </ul>
                     </div>
                 </section>
-            </CSSTransition>
         );
     }
 }

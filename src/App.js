@@ -1,6 +1,6 @@
 //module import
 import React, { Component } from 'react';
-import { Route, BrowserRouter, Switch } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 //style import
 import './App.scss';
@@ -8,24 +8,51 @@ import './App.scss';
 //component imports
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from "./components/Home";
-import Contact from "./components/Contact";
-import Webdev from "./components/Webdev";
-import Photography from "./components/Photography";
-import Climb from "./components/Climb";
-import NotFound from "./components/NotFound";
+import RouteContainer from './components/RouteContainer';
 
 class App extends Component {
 
     state = {
         currentBG: "img/temp-bg-large.jpg",
+        pageLoad: {
+            home: false,
+            climb: false,
+            contact: false,
+            photo: false,
+            web: false,
+            notFound: false
+        },
     }
 
+    //sets the background img source in state
     setBG = (file) => {
         this.setState({
             currentBG: `img/${file}.jpg`
         });
     }
+
+    //sets the pageLoad state to trigger CSS transitions
+    loadHandler = (pageToLoad, bool) => {
+
+        //ensures that there are never 2 true booleans
+        let loadState = {
+                    home: false,
+                    climb: false,
+                    contact: false,
+                    photo: false,
+                    web: false,
+                    notFound: false
+                };
+
+        //sets the boolean for the given page
+        loadState[pageToLoad] = bool;
+
+        //sets the boolean in state to pass down to the child components
+        this.setState({
+            pageLoad: loadState
+        });     
+    }
+
 
     fadeBG = (imageID) => {
         document.querySelector(".currentBG").fadeOut(800).addClass("hiddenBG");
@@ -73,45 +100,7 @@ class App extends Component {
             <BrowserRouter>
                 <div id="content">
                     <Header />
-                        <Switch>
-                            <Route 
-                                exact 
-                                path="/" 
-                                render={(props) => <Home 
-                                                        {...props} 
-                                                        setBG={this.setBG} />}
-                             />
-                            <Route 
-                                path="/web" 
-                                render={(props) => 
-                                                    <Webdev 
-                                                        {...props} 
-                                                        setBG={this.setBG} />} 
-                            />
-                            <Route 
-                                path="/climb" 
-                                render={(props) => <Climb 
-                                                        {...props} 
-                                                        setBG={this.setBG} />} 
-                            />
-                            <Route 
-                                path="/photo" 
-                                render={(props) => <Photography 
-                                                        {...props} 
-                                                        setBG={this.setBG} />} 
-                            />
-                            <Route 
-                                path="/contact" 
-                                render={(props) => <Contact 
-                                                        {...props} 
-                                                        setBG={this.setBG} />} 
-                            />
-                            <Route 
-                                render={(props) => <NotFound 
-                                                        {...props} 
-                                                        setBG={this.setBG} />} 
-                            />
-                        </Switch>
+                    <RouteContainer setBG={this.setBG} />
                     <Footer />
                     <img className="currentBG" src={this.state.currentBG} alt="page background" />
                 </div>    
