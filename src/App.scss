@@ -2,6 +2,8 @@
 
 //variables
 $accent-color: rgb(9, 44, 110);
+$logo-font: 'Amatic SC', cursive;
+$text-font: monospace;
 
 //mixins
 @mixin content-background {
@@ -16,7 +18,7 @@ $accent-color: rgb(9, 44, 110);
 
 //styling
 body {
-  font-family: 'Amatic SC', cursive;
+  font-family: $logo-font;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -98,7 +100,7 @@ footer {
   }
 }
 
-.currentBG {
+.backgroundImage {
   display: block;
   opacity: 0.8;
   z-index: -1;
@@ -139,7 +141,7 @@ button {
   background-color: #ddd;
   opacity: 0.6;
   border: solid black 4px;
-  font-family: 'Amatic SC', cursive;
+  font-family: $logo-font;
   font-size: 2em;
 }
 
@@ -191,7 +193,7 @@ button:hover {
 
   p {
     font-size: 1.4em;
-    font-family: monospace;
+    font-family: $text-font;
   }
 }
 
@@ -208,7 +210,7 @@ button:hover {
   }
 
   p {
-    font-family: monospace;
+    font-family: $text-font;
     font-size: .8em;
   }
 }
@@ -219,7 +221,7 @@ button:hover {
   @include content-background;
 
   p {
-    font-family: monospace;
+    font-family: $text-font;
     font-size: 1.4em;
   }
 }
@@ -243,7 +245,7 @@ button:hover {
 
 //animations
 .fade-enter {
-  opacity: 0.01;
+  opacity: 0;
 }
 
 .fade-enter.fade-enter-active {
@@ -256,7 +258,7 @@ button:hover {
 }
 
 .fade-exit.fade-exit-active {
-  opacity: 0.01;
+  opacity: 0;
   transition: opacity 500ms ease-in;
 }
 

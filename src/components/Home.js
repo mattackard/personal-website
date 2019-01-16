@@ -5,11 +5,7 @@ import { Link } from 'react-router-dom';
 class Home extends Component{
 
     static proptypes = {
-        setBG: Proptypes.func.isRequired,
-    }
 
-    componentWillMount() {
-        this.props.setBG('temp-bg-large');
     }
 
     render() {
@@ -20,6 +16,7 @@ class Home extends Component{
                     <button><Link to='/climb'>Climb</Link></button>
                     <button><Link to='/photo'>Photography</Link></button>
                 </nav>
+                <img className="backgroundImage" src="./img/temp-bg-large.jpg" alt="page background" />
             </section>
         );
     }

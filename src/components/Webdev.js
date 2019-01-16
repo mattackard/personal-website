@@ -4,11 +4,7 @@ import Proptypes from 'prop-types';
 class Webdev extends Component {
 
     static proptypes = {
-        setBG: Proptypes.func.isRequired,
-    }
 
-    componentDidMount() {
-        this.props.setBG('webBG');
     }
 
     render() {
@@ -27,6 +23,7 @@ class Webdev extends Component {
                             </li>
                         </ul>
                     </div>
+                    <img className="backgroundImage" src="./img/webBG.jpg" alt="page background" />
                 </section>
         );
     }

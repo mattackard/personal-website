@@ -4,11 +4,7 @@ import Proptypes from 'prop-types';
 class Contact extends Component {
 
     static proptypes = {
-        setBG: Proptypes.func.isRequired,
-    }
 
-    componentDidMount() {
-        this.props.setBG('contactBG');
     }
 
     render() {
@@ -21,6 +17,7 @@ class Contact extends Component {
                     <li><a href="https://www.linkedin.com/in/matthew-ackard" rel="noopener noreferrer" target="_blank"><img src="img/linkedin.svg" alt="Linkedin" /></a></li>
                     <li><a href="https://www.youtube.com/channel/UCXHd62lWJa0SvgGr5eHO2IA" rel="noopener noreferrer" target="_blank"><img src="img/youtube.svg" alt="Youtube" /></a></li>
                 </ul>
+                <img className="backgroundImage" src="./img/contactBG.jpg" alt="page background" />
             </section>
         );
     }
