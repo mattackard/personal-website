@@ -234,6 +234,17 @@ footer {
   }
 }
 
+#flickrPhotos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  list-style: none;
+  padding: 0;
+
+}
+
 /*error page*/
 
 #errorPage {
