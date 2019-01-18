@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Proptypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 class Home extends Component{
@@ -10,7 +9,7 @@ class Home extends Component{
 
     render() {
         return (
-            <section>
+            <section id="home">
                 <nav id="bigNav" className="subPage">
                     <button><Link to='/web'>Web Dev</Link></button>
                     <button><Link to='/climb'>Climb</Link></button>
