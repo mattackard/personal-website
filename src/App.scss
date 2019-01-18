@@ -43,23 +43,20 @@ header {
 
   a {
     color: black;
+    text-decoration: none;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+
+  h1:hover {
+    opacity: 0.6;
   }
 }
 
-h1 {
-  font-size: 3em;
-  margin: 0;
-}
-
-#mainPage {
-  text-decoration: none;
-
-  &:hover {
-    color: #555;
-  }
-}
-
-nav ul {
+#mainNav ul {
   display: flex;
   flex: 1 1 auto;
   white-space: nowrap;
@@ -67,14 +64,14 @@ nav ul {
   padding: 0;
   justify-content: center;
 
-  &:hover {
-    color: #555;
-  }
-
   li { 
     font-size: 1.5em;
     margin: 0 1em 0 .5em;
     text-decoration: underline;
+
+    a:hover {
+      opacity: 0.6;
+    }
   }
 
   li:first-child {
@@ -110,12 +107,6 @@ footer {
   min-height: 100%;
 }
 
-/*nav media queries*/
-
-
-
-/*home page*/
-
 #bigNav, #contactPage, #photoPage, #climbPage, #webPage, #errorPage {
   display: flex;
   flex: 1 auto auto;
@@ -125,11 +116,15 @@ footer {
   align-items: center;
 }
 
+
+/*home page*/
+
 #bigNav {
   flex-direction: column;
+  padding-top: 3em;
 
   button {
-    width: 60%;
+    width: 80%;
     height: 3em;
     margin: 1em auto;
     background-color: #ddd;
@@ -147,26 +142,28 @@ footer {
   a {
     text-decoration: none;
     color: black;
+    display: block;
+    padding: 6% 0;
   }
 
 }
-
-/*home page media queries*/
-
 
 /*contact page*/
 
 #contactPage {
   flex-direction: column;
+  margin-top: 5em;
 
   p {
     font-size: 2em;
+    font-weight: bold;
   }
 }
 
 #profilePic {
   border-radius: 50%;
-  margin-bottom: 5em;
+  width: 18em;
+  margin-bottom: 2em;
 }
 
 #contactIcons {
@@ -275,3 +272,44 @@ footer {
   top: 0;
   left: 0;
 }
+
+
+
+@media (min-width: 1000px) {
+
+  /*nav media queries*/
+  header {
+    background-color: rgba(221, 221, 221, 0.712);
+    padding: 1em 1em 0 1em;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    z-index: 2;
+    font-size: 1em;
+    text-align: left;
+    line-height: 0.7;
+
+    h1 {
+      margin-left: 10%;
+    }
+
+    nav {
+      margin-left: 3em; 
+    }
+  }
+
+  /*home page media queries*/
+  #bigNav {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 80%;
+    padding-top: 17%;
+    margin: 0 auto;
+
+    button {
+      width: 25%;
+    }
+  }
+}
+
+
