@@ -24,9 +24,45 @@ class Webdev extends Component {
 					<h1>My projects</h1>
 					<ul>
 						<li>
-							<img src="#" alt="portfolio screenshot" />
+							<h2>React To-do List</h2>
+							<a href="https://mattackard.github.io/todoList">
+								<img
+									src="./img/todo.png"
+									alt="to-do list project"
+								/>
+							</a>
+							<p>
+								A to-do list created in React with tags,
+								filtering, and deadline support
+							</p>
+							<button>
+								<a href="https://mattackard.github.io/todoList">
+									Live Site
+								</a>
+							</button>
+							<button>
+								<a href="https://github.com/mattackard/todoList">
+									Source Code
+								</a>
+							</button>
+						</li>
+						<li>
 							<h2>Franker.xyz</h2>
+							<a href="https://franker.xyz">
+								<img
+									src="./img/franker.png"
+									alt="franker dot xyz project"
+								/>
+							</a>
 							<p>Web apps related to twitch.tv streamers</p>
+							<button>
+								<a href="https://franker.xyz">Live Site</a>
+							</button>
+							<button>
+								<a href="https://github.com/mattackard/franker.xyz">
+									Source Code
+								</a>
+							</button>
 						</li>
 					</ul>
 				</div>
