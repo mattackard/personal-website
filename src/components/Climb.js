@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import MountainProjectRoute from "./MountainProjectRoute";
+
 class Climb extends Component {
 	static proptypes = {};
 
@@ -65,17 +67,13 @@ class Climb extends Component {
 				<h2>Ticks</h2>
 				<ul>
 					{this.state.ticks.map(route => (
-						<li key={route.id}>
-							{route.name}: {route.rating} Stars: {route.stars}
-						</li>
+						<MountainProjectRoute key={route.id} route={route} />
 					))}
 				</ul>
 				<h2>To-dos</h2>
 				<ul>
 					{this.state.todos.map(route => (
-						<li key={route.id}>
-							{route.name}: {route.rating} Stars: {route.stars}
-						</li>
+						<MountainProjectRoute key={route.id} route={route} />
 					))}
 				</ul>
 				<img

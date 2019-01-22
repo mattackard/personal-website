@@ -230,6 +230,25 @@ footer {
 		font-family: $text-font;
 		font-size: 1.4em;
 	}
+	ul {
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+}
+
+.mpRoute {
+	font-size: 1.4em;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 1em;
+	img {
+		height: 261px;
+		width: 400px;
+		margin: 0 auto;
+	}
 }
 
 /*photography page*/
