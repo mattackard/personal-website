@@ -20,9 +20,10 @@ class Photography extends Component {
 					let imageArray = [];
 					data.items.forEach(img => {
 						//grabs the full resolution picture instead of the thumbnail from json
-						imageArray.push(
-							img.media.m.replace("_m.jpg", "_b.jpg")
-						);
+						imageArray.push([
+							img.media.m.replace("_m.jpg", "_b.jpg"),
+							img.title,
+						]);
 					});
 					this.setState({
 						images: imageArray,
@@ -40,8 +41,8 @@ class Photography extends Component {
 					{//iterates through each image src in state and build list items for each image
 					this.state.images.map(image => {
 						return (
-							<li key={image}>
-								<img src={image} />
+							<li key={image[1]}>
+								<img src={image[0]} alt={image[1]} />
 							</li>
 						);
 					})}
