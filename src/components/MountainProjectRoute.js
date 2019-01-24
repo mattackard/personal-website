@@ -1,6 +1,8 @@
 import React from "react";
 import Proptypes from "prop-types";
 
+import Stars from "./Stars";
+
 // {
 //     "id": 105748391,
 //     "name": "Calypso",
@@ -27,12 +29,15 @@ import Proptypes from "prop-types";
 
 const MountainProjectRoute = ({ route }) => (
 	<li className="mpRoute">
-		<img src={route.imgSmallMed} alt={route.name} />
+		<a href={route.url}>
+			<img src={route.imgSmallMed} alt={route.name} />
+		</a>
 		<span>
 			{route.name} - {route.type}
 			{" - "}
-			{route.pitches > 1 ? `${route.pitches} pitches - ` : null} Stars:
-			{route.rating}
+			{route.pitches > 1
+				? `${route.pitches} pitches - `
+				: null} Grade: {route.rating} <Stars rating={route.stars} />
 		</span>
 		<span>
 			{[route.location[2], route.location[1], route.location[0]].join(
