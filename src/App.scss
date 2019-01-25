@@ -1,101 +1,104 @@
 //variables
 $accent-color: rgb(9, 44, 110);
-$logo-font: "Amatic SC",
-cursive;
-$text-font: monospace;
+$logo-font: "Amatic SC", cursive;
 //mixins
 @mixin content-background {
-    flex-direction: column;
-    justify-content: flex-start;
-    background: #ddd;
-    border-radius: 0.5em;
-    margin: 0 5% 5%;
+	flex-direction: column;
+	justify-content: flex-start;
+	background: #ddd;
+	margin: 0 5% 5%;
+}
+
+@mixin text-font {
+	font-family: monospace;
+	font-size: 1.2rem;
 }
 
 //styling
 body {
-    font-family: $logo-font;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    min-height: 100vh;
-    margin: 0;
+	font-family: $logo-font;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	min-height: 100vh;
+	margin: 0;
 }
 
 #root,
 #content {
-    min-height: 100vh;
+	min-height: 100vh;
 }
 
 header {
-    background-color: rgba(221, 221, 221, 0.712);
-    padding: 1em 1em 0 1em;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    z-index: 2;
-    font-size: 1em;
-    text-align: center;
-    line-height: 0.7;
-    a {
-        color: black;
-        text-decoration: none;
-    }
-    h1 {
-        font-size: 3em;
-        margin: 0;
-    }
-    h1:hover {
-        opacity: 0.6;
-    }
+	background-color: rgba(221, 221, 221, 0.712);
+	padding: 1em 1em 0 1em;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	z-index: 2;
+	font-size: 1em;
+	text-align: center;
+	line-height: 0.7;
+	a {
+		color: black;
+		text-decoration: none;
+	}
+	h1 {
+		font-size: 3rem;
+		margin: 0;
+	}
+	h1:hover {
+		opacity: 0.6;
+	}
 }
 
 #mainNav ul {
-    display: flex;
-    flex: 1 1 auto;
-    white-space: nowrap;
-    font-size: 1em;
-    padding: 0;
-    justify-content: center;
-    li {
-        font-size: 1.5em;
-        margin: 0 1em 0 0.5em;
-        text-decoration: underline;
-        a:hover {
-            opacity: 0.6;
-        }
-    }
-    li:first-child {
-        list-style: none;
-    }
+	display: flex;
+	flex: 1 1 auto;
+	white-space: nowrap;
+	font-size: 1em;
+	padding: 0;
+	justify-content: center;
+	li {
+		font-size: 1.5rem;
+		margin: 0 1em 0 0.5em;
+		text-decoration: underline;
+		a:hover {
+			opacity: 0.6;
+		}
+	}
+	li:first-child {
+		list-style: none;
+	}
 }
 
 .active {
-    color: $accent-color;
-    font-weight: bold;
+	color: $accent-color;
+	font-weight: bold;
 }
 
 footer {
-    text-align: center;
-    opacity: 0.3;
-    margin-bottom: 2px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    p {
-        margin: 0;
-        font-size: 2em;
-        color: white;
-    }
+	text-align: center;
+	opacity: 0.3;
+	margin-bottom: 2px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	p {
+		margin: 0;
+		font-size: 2rem;
+		color: white;
+	}
 }
 
 .backgroundImage {
-    display: block;
-    z-index: -1;
-    position: fixed;
-    top: 0;
-    min-width: 100%;
-    min-height: 100%;
+	display: block;
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	min-height: 100%;
 }
 
 #bigNav,
@@ -104,255 +107,267 @@ footer {
 #climbPage,
 #webPage,
 #errorPage {
-    display: flex;
-    flex: 1 auto auto;
-    flex-direction: row;
-    justify-content: center;
-    flex-grow: 1;
-    align-items: center;
+	display: flex;
+	flex: 1 auto auto;
+	flex-direction: row;
+	justify-content: center;
+	flex-grow: 1;
+	align-items: center;
 }
 
 /*home page*/
 
 #bigNav {
-    flex-direction: column;
-    padding-top: 3em;
-    button {
-        width: 80%;
-        height: 3em;
-        margin: 1em auto;
-        background-color: #ddd;
-        opacity: 0.6;
-        border: solid black 4px;
-        font-family: $logo-font;
-        font-size: 2em;
-    }
-    button:hover {
-        opacity: 0.85;
-    }
-    a {
-        text-decoration: none;
-        color: black;
-        display: block;
-        padding: 6% 0;
-    }
+	flex-direction: column;
+	padding-top: 3em;
+	button {
+		width: 80%;
+		height: 3em;
+		margin: 1em auto;
+		background-color: #ddd;
+		opacity: 0.6;
+		border: solid black 4px;
+		font-family: $logo-font;
+		font-size: 2rem;
+	}
+	button:hover {
+		opacity: 0.85;
+	}
+	a {
+		text-decoration: none;
+		color: black;
+		display: block;
+		padding: 6% 0;
+	}
 }
 
 /*contact page*/
 
 #contactPage {
-    flex-direction: column;
-    margin-top: 5em;
-    p {
-        font-size: 2em;
-        font-weight: bold;
-    }
+	flex-direction: column;
+	margin-top: 5em;
+	p {
+		font-size: 2rem;
+		font-weight: bold;
+	}
 }
 
 #profilePic {
-    border-radius: 50%;
-    width: 18em;
-    margin-bottom: 2em;
+	border-radius: 50%;
+	width: 18em;
+	margin-bottom: 2em;
 }
 
 #contactIcons {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    img {
-        width: 40px;
-        height: 40px;
-        margin: 0 0.5em;
-    }
-    img:hover {
-        opacity: 0.7;
-    }
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+	img {
+		width: 40px;
+		height: 40px;
+		margin: 0 0.5em;
+	}
+	img:hover {
+		opacity: 0.7;
+	}
 }
 
 /*web dev page*/
 
 #webPage {
-    @include content-background;
-    p {
-        font-size: 1.4em;
-        font-family: $text-font;
-        width: 80%;
-        text-align: center;
-    }
-    h1 {
-        margin: 1em 0 0;
-        text-align: center;
-        font-size: 2.5em;
-    }
+	@include content-background;
+	p {
+		@include text-font;
+		width: 80%;
+		text-align: center;
+	}
+	h1 {
+		margin: 1em 0 0;
+		text-align: center;
+		font-size: 2.5rem;
+		text-decoration: underline;
+	}
 }
 
 #webProjects {
-    ul {
-        text-align: center;
-        list-style: none;
-        font-size: 1.6em;
-        padding: 0;
-    }
-    li {
-        margin-bottom: 3em;
-    }
-    p {
-        font-family: $text-font;
-        font-size: 0.8em;
-        margin: auto;
-    }
-    img {
-        max-width: 80%;
-    }
-    button {
-        background-color: $accent-color;
-        padding: 1em;
-        border-radius: 1em;
-        margin: 1em;
-        border: none;
-    }
-    button:hover {
-        opacity: 0.6;
-    }
-    a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-    }
+	ul {
+		text-align: center;
+		list-style: none;
+		font-size: 1.6em;
+		padding: 0;
+	}
+	li {
+		margin-bottom: 3em;
+	}
+	p {
+		@include text-font;
+		margin: 1rem auto;
+	}
+	img {
+		max-width: 80%;
+	}
+	button {
+		background-color: $accent-color;
+		padding: 1em;
+		border-radius: 1em;
+		margin: 1em;
+		border: none;
+	}
+	button:hover {
+		opacity: 0.6;
+	}
+	a {
+		color: white;
+		text-decoration: none;
+		font-weight: bold;
+	}
 }
 
 /*climb page*/
 
 #climbPage {
-    @include content-background;
-    p {
-        font-family: $text-font;
-        font-size: 1.4em;
-    }
-    ul {
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 0;
-    }
-    li {
-        margin: 0 auto;
-    }
-    img {
-        max-width: 90%;
-    }
+	@include content-background;
+	p {
+		@include text-font;
+		width: 90%;
+		margin: 1em 0 2em;
+	}
+	ul {
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding: 0;
+	}
+	li {
+		margin: 0 auto;
+	}
+	img {
+		max-width: 90%;
+	}
+	h1 {
+		font-size: 2.5rem;
+		text-decoration: underline;
+	}
+	h2 {
+		text-decoration: underline;
+	}
 }
 
 .mpRoute {
-    font-size: 1.4em;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 1em;
-    img {
-        height: 261px;
-        max-width: 400px;
-        margin: 0 auto;
-    }
+	font-size: 1.4rem;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 1em;
+	img {
+		height: 261px;
+		max-width: 400px;
+		margin: 0 auto;
+	}
 }
 
 /*photography page*/
 
 #photoPage {
-    flex-direction: column;
-    justify-content: flex-start;
-    background: #ddd;
-    border-radius: 0.5em;
-    margin: 0 3% 5%;
-    h1 {
-        font-size: 4em;
-        color: blue;
-    }
+	flex-direction: column;
+	justify-content: flex-start;
+	background: #ddd;
+	border-radius: 0.5em;
+	margin: 0 3% 5%;
+	h1 {
+		font-size: 4rem;
+		color: blue;
+	}
+	p {
+		@include text-font;
+		width: 90%;
+		margin: 3em 0;
+	}
 }
 
 #flickrPhotos {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    list-style: none;
-    justify-content: center;
-    padding: 0;
-    li {
-        text-align: center;
-    }
-    img {
-        max-width: 92%;
-    }
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: center;
+	padding: 0;
+	li {
+		text-align: center;
+	}
+	img {
+		max-width: 92%;
+	}
 }
 
 /*error page*/
 
 #errorPage {
-    @include content-background;
+	@include content-background;
 }
 
 //animations
 .fade-enter {
-    opacity: 0;
+	opacity: 0;
 }
 
 .fade-enter.fade-enter-active {
-    opacity: 1;
-    transition: opacity 500ms ease-in;
+	opacity: 1;
+	transition: opacity 500ms ease-in;
 }
 
 .fade-exit {
-    opacity: 1;
+	opacity: 1;
 }
 
 .fade-exit.fade-exit-active {
-    opacity: 0;
-    transition: opacity 500ms ease-in;
+	opacity: 0;
+	transition: opacity 500ms ease-in;
 }
 
 //route container styling for transitions
 .transition-group {
-    position: relative;
+	position: relative;
 }
 
 .route-section {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    top: 0;
-    left: 0;
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	top: 0;
+	left: 0;
 }
 
 @media (min-width: 1000px) {
-    /*nav media queries*/
-    header {
-        background-color: rgba(221, 221, 221, 0.712);
-        padding: 1em 1em 0 1em;
-        display: flex;
-        position: relative;
-        flex-direction: row;
-        z-index: 2;
-        font-size: 1em;
-        text-align: left;
-        line-height: 0.7;
-        h1 {
-            margin-left: 10%;
-        }
-        nav {
-            margin-left: 3em;
-        }
-    }
-    /*home page media queries*/
-    #bigNav {
-        flex-direction: row;
-        justify-content: flex-start;
-        width: 80%;
-        padding-top: 17%;
-        margin: 0 auto;
-        button {
-            width: 25%;
-        }
-    }
+	/*nav media queries*/
+	header {
+		background-color: rgba(221, 221, 221, 0.712);
+		padding: 1em 1em 0 1em;
+		display: flex;
+		position: relative;
+		flex-direction: row;
+		z-index: 2;
+		font-size: 1rem;
+		text-align: left;
+		line-height: 0.7;
+		h1 {
+			margin-left: 10%;
+		}
+		nav {
+			margin-left: 3em;
+		}
+	}
+	/*home page media queries*/
+	#bigNav {
+		flex-direction: row;
+		justify-content: flex-start;
+		width: 80%;
+		padding-top: 17%;
+		margin: 0 auto;
+		button {
+			width: 25%;
+		}
+	}
 }
