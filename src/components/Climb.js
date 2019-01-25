@@ -63,7 +63,13 @@ class Climb extends Component {
 	render() {
 		return (
 			<section id="climbPage">
-				<h1>Bouldering the Bay Area</h1>
+				<h1>Climbing</h1>
+				<p>
+					I've been climbing (mostly indoors) for about 2 years now. I
+					grabbed some data from MountainProject to display the climbs
+					I have completed(ticks), and the climbs I would like to do
+					in the future.
+				</p>
 				<h2>Ticks</h2>
 				<ul>
 					{this.state.ticks.map(route => (

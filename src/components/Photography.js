@@ -36,6 +36,15 @@ class Photography extends Component {
 	render() {
 		return (
 			<section id="photoPage">
+				<p>
+					I consider myself a travel photographer so I like to take
+					photos on vacation and if I go outdoors for hiking or
+					climbing. The photos below are populated from my{" "}
+					<a href="https://www.flickr.com/photos/139144229@N05/">
+						flickr page
+					</a>
+					.
+				</p>
 				<ul id="flickrPhotos">
 					{//iterates through each image src in state and build list items for each image
 					this.state.images.map(image => {
