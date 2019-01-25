@@ -370,4 +370,37 @@ footer {
 			width: 25%;
 		}
 	}
+	/*webdev page media queries*/
+	#webPage {
+		margin: 0 15%;
+	}
+	#webProjects {
+		img {
+			max-width: 60%;
+		}
+	}
+	/*climb page media queries*/
+	#climbPage {
+		margin: 0 15%;
+		h2 {
+			font-size: 3rem;
+			margin-top: 2em;
+		}
+		p {
+			width: 80%;
+		}
+	}
+	/*photo page media queries*/
+	#photoPage {
+		margin: 0 15%;
+		p {
+			width: 80%;
+			margin: 6em 0;
+		}
+	}
+	#flickrPhotos {
+		img {
+			max-width: 100%;
+		}
+	}
 }
