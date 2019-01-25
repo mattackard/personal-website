@@ -36,7 +36,6 @@ class Photography extends Component {
 	render() {
 		return (
 			<section id="photoPage">
-				<h1>Hello World from Photography Page!</h1>
 				<ul id="flickrPhotos">
 					{//iterates through each image src in state and build list items for each image
 					this.state.images.map(image => {

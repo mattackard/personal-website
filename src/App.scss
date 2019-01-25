@@ -9,8 +9,7 @@ $text-font: monospace;
     justify-content: flex-start;
     background: #ddd;
     border-radius: 0.5em;
-    margin: 0 10% 5%;
-    padding: 4em;
+    margin: 0 5% 5%;
 }
 
 //styling
@@ -178,11 +177,11 @@ footer {
     p {
         font-size: 1.4em;
         font-family: $text-font;
-        width: 70%;
+        width: 80%;
         text-align: center;
     }
     h1 {
-        margin: 1em 0;
+        margin: 1em 0 0;
         text-align: center;
         font-size: 2.5em;
     }
@@ -196,7 +195,7 @@ footer {
         padding: 0;
     }
     li {
-        margin-bottom: 5em;
+        margin-bottom: 3em;
     }
     p {
         font-family: $text-font;
@@ -204,7 +203,7 @@ footer {
         margin: auto;
     }
     img {
-        max-width: 50%;
+        max-width: 80%;
     }
     button {
         background-color: $accent-color;
@@ -236,6 +235,13 @@ footer {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        padding: 0;
+    }
+    li {
+        margin: 0 auto;
+    }
+    img {
+        max-width: 90%;
     }
 }
 
@@ -255,7 +261,11 @@ footer {
 /*photography page*/
 
 #photoPage {
-    @include content-background;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #ddd;
+    border-radius: 0.5em;
+    margin: 0 3% 5%;
     h1 {
         font-size: 4em;
         color: blue;
@@ -264,12 +274,14 @@ footer {
 
 #flickrPhotos {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: baseline;
     list-style: none;
     padding: 0;
+    img {
+        max-width: 92%;
+        margin-left: 4%;
+    }
 }
 
 /*error page*/
