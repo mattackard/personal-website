@@ -2,3 +2,4 @@ node_modules/
 main.min.css
 app.min.js
 .vscode/settings.json
+build/
