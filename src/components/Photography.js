@@ -11,7 +11,7 @@ class Photography extends Component {
 	componentDidMount() {
 		//gets public image data from my flickr profile
 		jsonp(
-			"http://api.flickr.com/services/feeds/photos_public.gne?id=139144229@N05&format=json",
+			"https://api.flickr.com/services/feeds/photos_public.gne?id=139144229@N05&format=json",
 			{ name: "jsonFlickrFeed" },
 			(err, data) => {
 				if (err) {
