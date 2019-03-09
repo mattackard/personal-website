@@ -24,6 +24,31 @@ class Webdev extends Component {
 					<h1>My projects</h1>
 					<ul>
 						<li>
+							<h2>SRL Bets</h2>
+							<a href="https://srlbets.com">
+								<img
+									src="./img/srl.png"
+									alt="srl bets list project"
+								/>
+							</a>
+							<p>
+								SRLBets is a web app that allows twitch users to
+								bet on the winner of races hosted by
+								SpeedRunsLive. SRLBets extends the SpeedRunsLive
+								API to allow for tracking extra race statistics
+								and further integration with twitch user
+								profiles.
+							</p>
+							<button>
+								<a href="https://srlbets.com">Live Site</a>
+							</button>
+							<button>
+								<a href="https://github.com/mattackard/SRLbets">
+									Source Code
+								</a>
+							</button>
+						</li>
+						<li>
 							<h2>React To-do List</h2>
 							<a href="https://mattackard.github.io/todoList">
 								<img
@@ -42,24 +67,6 @@ class Webdev extends Component {
 							</button>
 							<button>
 								<a href="https://github.com/mattackard/todoList">
-									Source Code
-								</a>
-							</button>
-						</li>
-						<li>
-							<h2>Franker.xyz</h2>
-							<a href="https://franker.xyz">
-								<img
-									src="./img/franker.png"
-									alt="franker dot xyz project"
-								/>
-							</a>
-							<p>Web apps related to twitch.tv streamers</p>
-							<button>
-								<a href="https://franker.xyz">Live Site</a>
-							</button>
-							<button>
-								<a href="https://github.com/mattackard/franker.xyz">
 									Source Code
 								</a>
 							</button>
